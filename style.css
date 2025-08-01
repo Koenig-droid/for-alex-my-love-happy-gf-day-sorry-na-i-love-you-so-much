@@ -1,0 +1,144 @@
+
+body {
+    background-color: #5a7d4c;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    background-image: url('https://static.wikia.nocookie.net/minecraft_gamepedia/images/8/85/Moss_Block_JE3_BE2.png');
+    background-size: cover;
+}
+
+.container {
+    background-color: rgba(34, 49, 34, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 0 20px #ffffff50;
+}
+
+h1 {
+    color: #a8ff9e;
+}
+
+.letter {
+    margin: 20px 0;
+    font-size: 18px;
+    line-height: 1.6;
+    background-color: rgba(255,255,255,0.1);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #a8ff9e;
+    color: #2e2e2e;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #ccffcc;
+}
+
+.sparkles::before {
+    content: '✨ 💚 ✨ 💚 ✨';
+    display: block;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.from {
+    font-style: italic;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+
+
+@keyframes sparkle {
+    0% { opacity: 0.2; transform: scale(1) translateY(0); }
+    50% { opacity: 1; transform: scale(1.2) translateY(-10px); }
+    100% { opacity: 0.2; transform: scale(1) translateY(0); }
+}
+
+.sparkles::before {
+    content: '✨ 💚 ✨ 💚 ✨';
+    display: block;
+    font-size: 24px;
+    animation: sparkle 2s infinite ease-in-out;
+    margin-bottom: 10px;
+}
+
+
+
+.letter {
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.envelope {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    background: #f4fff4;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s ease-in-out;
+}
+
+.envelope .flap {
+    background: #a8ff9e;
+    height: 100px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform-origin: top center;
+    transform: rotateX(0deg);
+    transition: transform 1s ease-in-out;
+    z-index: 2;
+}
+
+.envelope.open .flap {
+    transform: rotateX(-120deg);
+}
+
+.envelope .content {
+    padding: 20px;
+    backface-visibility: hidden;
+    z-index: 1;
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+.music-player {
+    margin: 20px auto;
+}
+
+.music-player button {
+    padding: 10px 20px;
+    background-color: #a8ff9e;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#response {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #0a0a0a;
+}
